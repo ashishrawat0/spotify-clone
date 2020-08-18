@@ -9,7 +9,10 @@ function App() {
       const hash = getTokenFromUrl();
       window.location.hash = "";
       const _token = hash.access_token
-      setToken(_token);
+      if(_token){
+        setToken(_token);
+      }
+      
   },[])
 
   return (
