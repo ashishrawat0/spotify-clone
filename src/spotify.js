@@ -1,8 +1,6 @@
-import { StrictMode } from "react";
-
 export const authEndpoint = "https://accounts.spotify.com/authorize";
 
-const redirectUri = "https://localhost:3000/"
+const redirectUri = "http://localhost:3000/"
 
 const clientId = "2f5f5909d8474c3a97cd42b8f32ed0c5"
 
@@ -11,7 +9,7 @@ const scopes = [
     "user-read-recently-played",
     "user-read-playback-state",
     "user-top-read",
-    "user-modified-playback-state"
+    "user-modify-playback-state",
 ];
 
 export const getTokenFromUrl = () => {
@@ -22,4 +20,4 @@ export const getTokenFromUrl = () => {
     }, {});
 }
 
-export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}$scope=${scopes.join("%20")}&response_type=token&show_dialog=true`
+export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`
