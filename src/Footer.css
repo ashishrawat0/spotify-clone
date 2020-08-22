@@ -21,6 +21,9 @@
     justify-content: space-between;
     max-width: 250px;
 }
-.footer__rigth{
+.footer__right{
     flex:0.3;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Footer.css'   
+import './Footer.css'
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
 import SkipNextIcon from "@material-ui/icons/SkipNext";
@@ -8,6 +8,7 @@ import RepeatIcon from "@material-ui/icons/Repeat";
 import VolumeDownIcon from "@material-ui/icons/VolumeDown";
 import PauseCircleOutlineIcon from "@material-ui/icons/PauseCircleOutline";
 import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
+import { Grid, Slider } from "@material-ui/core";
 
 function Footer() {
     return (
@@ -16,14 +17,24 @@ function Footer() {
                 <p>Album sing and details</p>
             </div>
             <div className="footer__center">
-                <ShuffleIcon className="footer__green"/>
+                <ShuffleIcon className="footer__green" />
                 <SkipPreviousIcon className="footer__icon" />
-                <PlayCircleOutlineIcon fontSize="large" className=""/>
-                <SkipNextIcon className="footer__icon"/>
-                <RepeatIcon className="footer__green"/>
+                <PlayCircleOutlineIcon fontSize="large" className="" />
+                <SkipNextIcon className="footer__icon" />
+                <RepeatIcon className="footer__green" />
             </div>
             <div className="footer__right">
-                <p>Volume controls</p>
+                <Grid container spacing={2}>
+                    <Grid item>
+                        <PlaylistPlayIcon />
+                    </Grid>
+                    <Grid item>
+                        <VolumeDownIcon />
+                    </Grid>
+                    <Grid item xs>
+                        <Slider></Slider>
+                    </Grid>
+                </Grid>
             </div>
         </div>
     )
